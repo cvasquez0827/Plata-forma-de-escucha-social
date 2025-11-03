@@ -1,0 +1,32 @@
+[
+  {
+    "post_id": "tw-001",
+    "source": "twitter",
+    "author_id": "user123",
+    "author": "Ana",
+    "text": "Servicio excelente en la tienda de Lima, gracias por la ayuda!",
+    "timestamp": "2024-03-01T10:15:00",
+    "country": "PER",
+    "city": "Lima"
+  },
+  {
+    "post_id": "tw-002",
+    "source": "twitter",
+    "author_id": "user456",
+    "author": "Luis",
+    "text": "Otra demora con el envío, terrible logística esta semana",
+    "timestamp": "2024-03-01T12:45:00",
+    "country": "PER",
+    "city": "Lima"
+  },
+  {
+    "post_id": "yt-001",
+    "source": "youtube",
+    "author_id": "user789",
+    "author": "Carla",
+    "text": "El video sobre atención al cliente es increíble, aprendí mucho",
+    "timestamp": "2024-03-02T09:10:00",
+    "country": "CHL",
+    "city": "Santiago"
+  }
+]
