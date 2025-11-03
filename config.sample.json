@@ -1,0 +1,16 @@
+{
+  "sources": [
+    {
+      "type": "json_file",
+      "path": "data/sample_posts.json",
+      "default_source": "demo"
+    }
+  ],
+  "topics": {
+    "keywords": {
+      "logistica": ["logística", "envío", "demora", "courier"],
+      "atencion": ["atención", "ayuda", "servicio"],
+      "contenido": ["video", "contenido"]
+    }
+  }
+}

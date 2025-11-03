@@ -1,5 +1,50 @@
 # Plataforma de IA de Escucha Social
 
+## Resumen ejecutivo
+
+Este repositorio contiene tanto el **PRD completo** como un **primer prototipo funcional** para ejecutar analítica básica de escucha social. El objetivo es ofrecer una base extensible que permita:
+
+- Ingerir publicaciones desde múltiples fuentes (actualmente JSON local de ejemplo, fácilmente extensible a APIs públicas).
+- Ejecutar heurísticas de sentimiento y clasificación temática orientadas a Latinoamérica.
+- Generar agregaciones rápidas (distribución de sentimiento, volumen por país, línea de tiempo) que alimenten tableros o integraciones.
+
+## Instalación y uso rápido
+
+1. Cree un entorno virtual con Python ≥ 3.11.
+2. Instale el paquete en modo editable:
+
+   ```bash
+   pip install -e .
+   ```
+
+3. Ejecute el pipeline con la configuración de muestra incluida:
+
+   ```bash
+   social-listening config.sample.json
+   ```
+
+   El comando imprimirá en consola los insights agregados y las publicaciones enriquecidas.
+
+4. Para guardar los resultados en disco, añada `--output insights.json`.
+
+### Extender la ingesta
+
+Los conectores se registran en `social_listening.pipeline.SOURCE_REGISTRY`. Para sumar un nuevo origen (por ejemplo, una API de Twitter mediante snscrape o un crawler de foros), cree una clase que herede de `SocialSource` y agréguela al registro.
+
+### Clasificación temática
+
+Las palabras clave por tópico se definen en el archivo de configuración JSON (`config.sample.json`). Edite la sección `topics.keywords` para mapear términos locales de cada país/industria.
+
+### Pruebas
+
+El módulo de sentimiento cuenta con pruebas unitarias de referencia:
+
+```bash
+pytest
+```
+
+---
+
 ## PRD / SRS – Contexto LATAM
 
 - **Versión:** 1.0  

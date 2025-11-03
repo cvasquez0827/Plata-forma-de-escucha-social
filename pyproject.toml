@@ -1,0 +1,16 @@
+[project]
+name = "social-listening"
+version = "0.1.0"
+description = "Herramienta modular para ingesta y analítica de conversaciones sociales en LATAM"
+requires-python = ">=3.11"
+authors = [
+  { name = "Equipo Plataforma de Escucha Social" }
+]
+dependencies = []
+
+[project.scripts]
+social-listening = "social_listening.cli:main"
+
+[build-system]
+requires = ["setuptools>=67", "wheel"]
+build-backend = "setuptools.build_meta"
